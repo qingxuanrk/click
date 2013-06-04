@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+        <title>Md5</title>
+        
+    </head>
+    <body>
+        <script type="text/javascript" src="md5.js"></script>
+        <script type="text/javascript">
+        function md5(){
+          var hash = hex_md5(document.getElementById("text").value);
+          document.getElementById("result").value = hash;
+        }
+        function trans(){
+          frm.pwd.value = hex_md5(frm.pwd.value);
+          document.getElementById("result2").value = frm.pwd.value;
+        }
+        function submit(){
+          //默认的提交处理，自定义的提交前处理方法不要用submit作为函数名
+        }
+        //onsubmit="pwd.value =hex_md5(pwd.value)"
+    </script>
+
+            <p>MD5加密：</p>
+            <p>转换前：<input type="text" id="text" style="width:200px" value="welcome to this" /></p>
+            <p>转换后：<fd type="text" id="result" style="width:300px" /></p>
+            <p><input type="button" value=" MD5加密 " onClick="md5()" /></p>
+            <form name="frm" >
+            <p>name: <input type="text" id="name"  style="width:200px" /> </p>
+            <p>password: <input type="password" id="pwd" style="width:200px" /></p>
+            <p><input type="button" value=" 加密 " onClick="trans()" /></p>
+            <p>加密后的密码：<input type="text" id="result2" style="width:300px" /></p>
+            
+    </body>
+</html>
